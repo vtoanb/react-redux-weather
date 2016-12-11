@@ -9,6 +9,7 @@ export default class SearchBar extends Component {
 
   onInputChange(event) {
     console.log(event.target.value);
+    this.setState({ term: event.target.value });
   }
 
   render () {
@@ -17,7 +18,7 @@ export default class SearchBar extends Component {
         <input
           placeholder="get a five-day forecast in your favorite cities"
           value={this.state.term}
-          onChange={this.onInputChange}
+          onChange={(event)=>this.onInputChange(event)}
           className="form-control" />
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">Search</button>
