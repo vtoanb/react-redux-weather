@@ -19,11 +19,11 @@ export default class SearchBar extends Component {
 
   render () {
     return (
-      <form onSubmit={(event) => this.onFormSubmit(event)} className="input-group">
+      <form onSubmit={ event => this.onFormSubmit(event) } className="input-group">
         <input
           placeholder="get a five-day forecast in your favorite cities"
           value={this.state.term}
-          onChange={(event)=>this.onInputChange(event)}
+          onChange={ event => this.onInputChange(event) }
           className="form-control" />
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">Search</button>
